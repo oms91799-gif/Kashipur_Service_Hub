@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel - Kashipur Service Hub</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #333; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Admin Dashboard (Om Singh)</h1>
+    <p>Kashipur ke registered users ki list:</p>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Naam</th>
+            <th>Phone</th>
+            <th>Role</th>
+            <th>Service/Work</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.phone }}</td>
+            <td>{{ user.role }}</td>
+            <td>{{ user.service }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">+ Naya User Register Karein</a>
+</body>
+</html>

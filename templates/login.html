@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; background-position: center;
+            font-family: 'Montserrat', sans-serif; min-height: 100vh; display: flex; align-items: center;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95); border-radius: 30px; padding: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3); width: 100%; max-width: 400px; margin: auto;
+        }
+        .heading-style { font-family: 'Bebas Neue', cursive; font-size: 3.5rem; color: #ff4757; text-align: center; }
+        .btn-login {
+            background: #ff4757; color: white; font-weight: 700; padding: 12px;
+            border-radius: 12px; width: 100%; border: none; transition: 0.3s;
+        }
+        .btn-login:hover { background: #2f3542; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+    <div class="glass-card">
+        <h1 class="heading-style">WELCOME BACK</h1>
+        <p class="text-center text-muted mb-4 small">Kashipur Hub mein login karein</p>
+        
+        <form action="/login" method="POST">
+            <input type="text" name="phone" class="form-control mb-3" placeholder="Phone Number" required style="border-radius:10px; padding:12px;">
+            <input type="password" name="password" class="form-control mb-4" placeholder="Password" required style="border-radius:10px; padding:12px;">
+            <button type="submit" class="btn-login shadow">Login to Dashboard</button>
+        </form>
+        
+        <div class="text-center mt-3">
+            <a href="/register" class="text-muted small text-decoration-none">Naya account banayein?</a>
+        </div>
+    </div>
+</body>
+</html>
